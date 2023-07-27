@@ -30,10 +30,11 @@ public class DispatcherServlet extends HttpServlet {
         log.info("[DispatcherServlet] service started.");
         try {
             Controller handler = rmhm.findHandler(new HandlerKey(RequestMethod.valueOf(request.getMethod()),request.getRequestURI()));
+            // "redirect:/users" vs forward
             String viewName = handler.handleRequest(request, response);
 
-            RequestDispatcher requestDispatcher = request.getRequestDispatcher(viewName);
-            requestDispatcher.forward(request, response);
+//            RequestDispatcher requestDispatcher = request.getRequestDispatcher(viewName);
+//            requestDispatcher.forward(request, response);
 
         } catch (Exception e) {
             log.error("exception occurred: [{}]", e.getMessage(), e);
