@@ -33,8 +33,6 @@ public class DispatcherServlet extends HttpServlet {
             // "redirect:/users" vs forward
             String viewName = handler.handleRequest(request, response);
 
-//            RequestDispatcher requestDispatcher = request.getRequestDispatcher(viewName);
-//            requestDispatcher.forward(request, response);
 
         } catch (Exception e) {
             log.error("exception occurred: [{}]", e.getMessage(), e);
