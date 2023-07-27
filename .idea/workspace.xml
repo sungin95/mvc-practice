@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78fd8ecc-4355-44b6-b8c6-81d399e33722" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/mvc/DispatcherServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/mvc/controller/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/mvc/controller/HomeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/mvc/controller/RequestMappingHandlerMapping.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/logback.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webapps/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/WebApplicationServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/WebApplicationServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapps/INF-WEB/classes/org/example/WebApplicationServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapps/WEB-INF/classes/org/example/WebApplicationServer.class" afterDir="false" />
-    </list>
+    <list default="true" id="78fd8ecc-4355-44b6-b8c6-81d399e33722" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -90,7 +79,7 @@
       <option name="presentableId" value="Default" />
       <updated>1690359333399</updated>
       <workItem from="1690359334405" duration="6372000" />
-      <workItem from="1690419484479" duration="3326000" />
+      <workItem from="1690419484479" duration="3663000" />
     </task>
     <servers />
   </component>

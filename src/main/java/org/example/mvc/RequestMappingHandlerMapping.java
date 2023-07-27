@@ -1,4 +1,7 @@
-package org.example.mvc.controller;
+package org.example.mvc;
+
+import org.example.mvc.controller.Controller;
+import org.example.mvc.controller.HomeController;
 
 import java.util.HashMap;
 import java.util.Map;
