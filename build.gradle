@@ -16,7 +16,7 @@ dependencies {
     implementation 'javax.servlet:jstl:1.2' // jsp
     implementation 'javax.servlet:javax.servlet-api:4.0.1' // servlet
 
-//    implementation 'org.reflections:reflections:0.9.12'
+    implementation 'org.reflections:reflections:0.9.12'
 
     implementation 'ch.qos.logback:logback-classic:1.2.3' // logger
 
