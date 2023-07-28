@@ -1,11 +1,12 @@
 package org.example.mvc;
 
 import org.example.mvc.controller.*;
+import org.example.mvc.view.HandlerMapping;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class RequestMappingHandlerMapping {
+public class RequestMappingHandlerMapping implements HandlerMapping {
 
     // key: /users [value] UserController
     private Map<HandlerKey, Controller> mappings = new HashMap<>();
