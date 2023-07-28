@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="78fd8ecc-4355-44b6-b8c6-81d399e33722" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/mvc/filter/CharacterEncodingFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/mvc/SimpleControllerHandlerAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/mvc/view/HandlerAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/mvc/view/ModelAndView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/mvc/DispatcherServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/mvc/DispatcherServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/mvc/filter/CharacterEncodingFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/mvc/filter/CharacterEncodingFilter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +61,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.example.mvc.view" />
+      <recent name="org.example.mvc" />
       <recent name="org.example.mvc.controller" />
     </key>
   </component>
@@ -91,7 +97,7 @@
       <workItem from="1690359334405" duration="6372000" />
       <workItem from="1690419484479" duration="8607000" />
       <workItem from="1690456891565" duration="4733000" />
-      <workItem from="1690508746672" duration="1158000" />
+      <workItem from="1690508746672" duration="6817000" />
     </task>
     <servers />
   </component>
