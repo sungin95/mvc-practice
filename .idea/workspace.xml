@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="78fd8ecc-4355-44b6-b8c6-81d399e33722" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/mvc/view/JspViewResolver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/mvc/view/ViewResolver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/mvc/filter/CharacterEncodingFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/mvc/DispatcherServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/mvc/DispatcherServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/mvc/RequestMappingHandlerMapping.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/mvc/RequestMappingHandlerMapping.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/mvc/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/mvc/controller/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/mvc/controller/UserListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/mvc/controller/UserListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/mvc/view/RedirectView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/mvc/view/RedirectView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +90,8 @@
       <updated>1690359333399</updated>
       <workItem from="1690359334405" duration="6372000" />
       <workItem from="1690419484479" duration="8607000" />
-      <workItem from="1690456891565" duration="1922000" />
+      <workItem from="1690456891565" duration="4733000" />
+      <workItem from="1690508746672" duration="1158000" />
     </task>
     <servers />
   </component>
