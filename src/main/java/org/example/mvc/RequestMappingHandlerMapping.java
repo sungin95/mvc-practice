@@ -1,7 +1,6 @@
 package org.example.mvc;
 
 import org.example.mvc.controller.*;
-import org.example.mvc.view.HandlerMapping;
 
 import java.util.HashMap;
 import java.util.Map;

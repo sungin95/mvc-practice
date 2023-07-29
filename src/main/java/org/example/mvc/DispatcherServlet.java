@@ -1,7 +1,11 @@
 package org.example.mvc;
 
 import org.example.mvc.controller.RequestMethod;
-import org.example.mvc.view.*;
+import org.example.mvc.view.JspViewResolver;
+import org.example.mvc.view.ModelAndView;
+import org.example.mvc.view.View;
+import org.example.mvc.view.ViewResolver;
+import org.example.mvc.view.HandlerAdapter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -12,11 +16,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.Collections;
 import java.util.List;
-import java.io.IOException;
 
-@WebServlet("/") // 어떠한 경로로 요청이 들어오더라도 여기를 통과한다.
+@WebServlet("/")
 public class DispatcherServlet extends HttpServlet {
-    private static final Logger log = LoggerFactory.getLogger(DispatcherServlet.class);
+    private static final Logger logger = LoggerFactory.getLogger(DispatcherServlet.class);
 
     private List<HandlerMapping> handlerMappings;
 
@@ -25,7 +28,7 @@ public class DispatcherServlet extends HttpServlet {
     private List<ViewResolver> viewResolvers;
 
     @Override
-    public void init() throws ServletException {
+    public void init() {
         RequestMappingHandlerMapping rmhm = new RequestMappingHandlerMapping();
         rmhm.init();
 
@@ -38,25 +41,17 @@ public class DispatcherServlet extends HttpServlet {
     }
 
     @Override
-    protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        log.info("[DispatcherServlet] service started.");
-        /**
-         * 요청이 들어오면 hm이 핸들러를 먼저 한다.
-         * 핸들러 어댑터를 통해서 핸들러를 찾아서 실행해 준다.
-         * 어댑터 내부에서 핸들러를 찾아서 실행해 준다.
-         */
-        // 복수형으로 바꾸어줌.
+    protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException {
         String requestURI = request.getRequestURI();
         RequestMethod requestMethod = RequestMethod.valueOf(request.getMethod());
 
+        Object handler = handlerMappings.stream()
+                .filter(hm -> hm.findHandler(new HandlerKey(requestMethod, requestURI)) != null)
+                .map(hm -> hm.findHandler(new HandlerKey(requestMethod, requestURI)))
+                .findFirst()
+                .orElseThrow(() -> new ServletException("No handler for [" + requestMethod + ", " + requestURI + "]"));
+
         try {
-            Object handler = handlerMappings.stream()
-                    .filter(hm -> hm.findHandler(new HandlerKey(requestMethod, requestURI)) != null)
-                    .map(hm -> hm.findHandler(new HandlerKey(requestMethod, requestURI)))
-                    .findFirst()
-                    .orElseThrow(() -> new ServletException("No handler for [" + requestMethod + ", " + requestURI + "]"));
-
-
             HandlerAdapter handlerAdapter = handlerAdapters.stream()
                     .filter(ha -> ha.supports(handler))
                     .findFirst()
@@ -64,15 +59,13 @@ public class DispatcherServlet extends HttpServlet {
 
             ModelAndView modelAndView = handlerAdapter.handle(request, response, handler);
 
-            for (ViewResolver viewResolver : viewResolvers) {
-                View view = viewResolver.resolveView(modelAndView.getViewName());
+            for (ViewResolver viewResolver : this.viewResolvers) {
+                View view = viewResolver.resolveViewName(modelAndView.getViewName());
                 view.render(modelAndView.getModel(), request, response);
-
             }
-        } catch (Exception e) {
-            log.error("exception occurred: [{}]", e.getMessage(), e);
+        } catch (Throwable e) {
+            logger.error("exception occurred: [{}]", e.getMessage(), e);
             throw new ServletException(e);
         }
     }
-
 }

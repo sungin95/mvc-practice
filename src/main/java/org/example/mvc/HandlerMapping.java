@@ -1,4 +1,4 @@
-package org.example.mvc.view;
+package org.example.mvc;
 
 import org.example.mvc.HandlerKey;
 
